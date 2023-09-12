@@ -8,19 +8,18 @@ img{
 }
 
 body{
-    background-color: silver
+    background-color: #333;
 }
 
 .slider {
     text-align: center;
     padding: 2rem;
     max-width: 40rem;
-    max-height: 40rem;
     margin: 0 auto;
 }
 .slides {
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 #nav-1:checked ~ .slides .inner{
@@ -34,6 +33,12 @@ body{
 }
 #nav-4:checked ~ .slides .inner{
     margin-left: -300%;
+}
+#nav-1:checked ~ .nav .nav-name #nav-1__name{
+    opacity: 1;
+}
+#nav-2:checked ~ .nav .nav-name #nav-2__name{
+    opacity: 1;
 }
 
 .inner {
@@ -51,14 +56,26 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.nav-name{
+    color: #fff;
+    font-size: 1rem;
+}
+.nav__name{
+    display: block;
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s ease 0s;
+}
 .nav__label {
+    cursor: pointer;
     width: 25px;
     height: 25px;
-    background-color: red;
+    background-color: #6565d8;
     border-radius: 50%;
 }
 .nav__bullet{
     display: flex;
+    gap: 1rem;
 }
 .nav__input {
     display: none;

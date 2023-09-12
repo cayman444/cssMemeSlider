@@ -1,0 +1,65 @@
+@import url(reset.css);
+
+img{
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+body{
+    background-color: silver
+}
+
+.slider {
+    text-align: center;
+    padding: 2rem;
+    max-width: 40rem;
+    max-height: 40rem;
+    margin: 0 auto;
+}
+.slides {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#nav-1:checked ~ .slides .inner{
+    margin-left: 0;
+}
+#nav-2:checked ~ .slides .inner{
+    margin-left: -100%;
+}
+#nav-3:checked ~ .slides .inner{
+    margin-left: -200%;
+}
+#nav-4:checked ~ .slides .inner{
+    margin-left: -300%;
+}
+
+.inner {
+    display: flex;
+    width: 400%;
+    transition: all 0.3s ease 0s;
+}
+.slide {
+    width: 25%;
+}
+.slide-1 {
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__label {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 50%;
+}
+.nav__bullet{
+    display: flex;
+}
+.nav__input {
+    display: none;
+}

@@ -17,6 +17,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .slider {
@@ -26,8 +27,9 @@ body{
     padding: 2rem;
 }
 .slides {
+    border-radius: 0.8rem;
     overflow: hidden;
-    max-width: 55rem;
+    max-width: 40rem;
 }
 
 #nav-1:checked ~ .slides .inner{
@@ -43,16 +45,25 @@ body{
     margin-left: -300%;
 }
 #nav-1:checked ~ .nav .nav-name #nav-1__name{
+    display: block;
     opacity: 1;
+    animation: name 1s;
+
 }
 #nav-2:checked ~ .nav .nav-name #nav-2__name{
+    display: block;
     opacity: 1;
+    animation: name 1s;
 }
 #nav-3:checked ~ .nav .nav-name #nav-3__name{
+    display: block;
     opacity: 1;
+    animation: name 1s;
 }
 #nav-4:checked ~ .nav .nav-name #nav-4__name{
+    display: block;
     opacity: 1;
+    animation: name 1s;
 }
 #nav-1:checked ~ .nav .nav__bullet #nav-1__check .nav__label-bullet{
     background-color: #333;
@@ -74,8 +85,6 @@ body{
 }
 .slide {
     width: 25%;
-    border-radius: 10px;
-    overflow: hidden;
 }
 .slide-1 {
 }
@@ -88,10 +97,18 @@ body{
     color: #fff;
     font-size: 1rem;
 }
+
+@keyframes name {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .nav__name{
-    display: block;
+    display: none;
     opacity: 0;
-    height: 0;
     transition: all 0.3s ease 0s;
 }
 .nav__label {
@@ -99,8 +116,8 @@ body{
     padding: 0.5rem;
 }
 .nav__label-bullet{
-    width: 25px;
-    height: 25px;
+    width: 1.6rem;
+    height: 1.6rem;
     background-color: #6565d8;
     border: 1px solid #6565d8;
     border-radius: 50%;
@@ -114,16 +131,7 @@ body{
     background-color: #7a7a7a;
     border: 1px solid #7a7a7a;
 }
-.nav__label-checked{
-    width: 23px;
-    height: 23px;
-    background-color: #333;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-top: 1px;
-    opacity: 0;
-    transition: all 0.3s ease 0s;
-}
+
 .nav__bullet{
     display: flex;
     gap: 1rem;
